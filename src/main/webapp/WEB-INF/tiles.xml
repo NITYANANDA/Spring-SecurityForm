@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+    <definition name="base.definition" template="/WEB-INF/layout/Layout.jsp">
+        <put-attribute name="title" value=""></put-attribute>
+        <put-attribute name="header" value="/WEB-INF/layout/Header.jsp"></put-attribute>
+        <put-attribute name="menu" value="/WEB-INF/layout/Menu.jsp"></put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/layout/Footer.jsp"></put-attribute>
+    </definition>
+
+    <definition name="loginPage" extends="base.definition">
+        <put-attribute name="title" value="Employee Data Form"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/pages/loginPage.jsp"></put-attribute>
+    </definition>
+    <definition name="logoutPage" extends="base.definition">
+        <put-attribute name="title" value="Employee Data Form"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/pages/logoutPage.jsp"></put-attribute>
+    </definition>
+ 
+    <definition name="book" extends="base.definition">
+        <put-attribute name="title" value="Employee Data Form"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/jsp/book.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="employeesList" extends="base.definition">
+        <put-attribute name="title" value="Employees List"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/employeesList.jsp"></put-attribute>
+    </definition>
+ 
+</tiles-definitions>
