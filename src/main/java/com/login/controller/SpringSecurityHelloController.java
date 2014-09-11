@@ -1,4 +1,4 @@
-package com.srccodes.spring.controller;
+package com.login.controller;
 
 import java.security.Principal;
 
@@ -7,27 +7,24 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * @author Abhijit Ghosh
- * @version 1.0
- */
 
+@RequestMapping("/home")
 @Controller
 public class SpringSecurityHelloController {
 	@RequestMapping("/secured/mypage")
-	public String mypage(Model model, Principal principal) {
-		String userName = principal.getName();
-		model.addAttribute("message", "Hi " + userName + ", Welcome to 'Spring Security Custom Login Form Example'");
 
-		return "secured/mypage";
+	public String mypage(Model model, Principal principal) {
+
+		return "redirect:/admin/index";
 	}
 	
 	@RequestMapping(value = "/logoutPage", method = RequestMethod.GET)
+	
 	public String logoutPage() {
 		return "logoutPage";
 	}
 	
-	@RequestMapping(value = "/loginPage", method = RequestMethod.GET)
+	@RequestMapping(value = "/loginPages", method = RequestMethod.GET)
 	public String loginPage() {
 		return "loginPage";
 	}
