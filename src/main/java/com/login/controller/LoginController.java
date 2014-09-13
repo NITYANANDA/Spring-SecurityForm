@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @RequestMapping("/home")
 @Controller
-public class SpringSecurityHelloController {
+public class LoginController {
 	@RequestMapping("/secured/mypage")
 
 	public String mypage(Model model, Principal principal) {
 
-		return "redirect:/admin/index";
+		return "redirect:/admin/users";
 	}
 	
 	@RequestMapping(value = "/logoutPage", method = RequestMethod.GET)

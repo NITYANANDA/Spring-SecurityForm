@@ -8,19 +8,19 @@
 </title>
 </head>
 <body>
-	<table border="1" cellspacing="2"  height="600" width="100%">
+	<table border="1" cellspacing="1"   width="100%">
 		<tr>
 			<td height="30" colspan="2"><tiles:insertAttribute name="header" />
 			</td>
 		</tr>
 		<tr height="100%">
-			<td height="250" width="60px"><tiles:insertAttribute name="menu" />
+			<td height="270" width="70px"><tiles:insertAttribute name="menu" />
 			</td>
-			<td width="400"><tiles:insertAttribute name="body" />
+			<td width="410"><tiles:insertAttribute name="body" />
 			</td>
 		</tr>
-		<tr>
-			<td height="30" colspan="2"><tiles:insertAttribute name="footer" />
+		<tr height="10px">
+			<td height="20" colspan="2"><tiles:insertAttribute name="footer" />
 			</td>
 		</tr>
 	</table>
