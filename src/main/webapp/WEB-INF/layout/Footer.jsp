@@ -1,3 +1,2 @@
-<center>
-<p>Copyright &copy; Being Java Guys</p>
-</center>
+
+<p>Copyright &copy; nityajava.com</p>

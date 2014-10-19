@@ -11,8 +11,9 @@
                 Reason : ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
          </div>
 	</c:if>
+	<div style="width: 620px;height: 400px">
 	<form action="${pageContext.request.contextPath}/login" method="post">
-		<table>
+		<table align="center">
 			<tr>
 				<td>Username:</td>
 				<td><input type='text' name='username' /></td>
@@ -21,10 +22,11 @@
 				<td>Password:</td>
 				<td><input type='password' name='password'></td>
 			</tr>
-			<tr>
-				<td colspan='2'><input name="submit" type="submit" value="Submit"></td>
+			<tr >
+				<td ><input name="submit" type="submit" value="Submit"></td>
 			</tr>
 		</table>
 	</form>
+	</div>
 </body>
 </html>

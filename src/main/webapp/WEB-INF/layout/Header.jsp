@@ -1,3 +1,3 @@
-<center>
-<h1>Header</h1>
-</center>
+<div >
+<h1>Welcome to our side</h1>
+</div>

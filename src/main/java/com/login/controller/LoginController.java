@@ -15,7 +15,7 @@ public class LoginController {
 
 	public String mypage(Model model, Principal principal) {
 
-		return "redirect:/admin/users";
+		return "redirect:/admin/home";
 	}
 	
 	@RequestMapping(value = "/logoutPage", method = RequestMethod.GET)
@@ -24,7 +24,7 @@ public class LoginController {
 		return "logoutPage";
 	}
 	
-	@RequestMapping(value = "/loginPages", method = RequestMethod.GET)
+	@RequestMapping(value = "/loginPage", method = RequestMethod.GET)
 	public String loginPage() {
 		return "loginPage";
 	}

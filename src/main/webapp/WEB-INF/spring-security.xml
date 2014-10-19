@@ -4,15 +4,23 @@
           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
           http://www.springframework.org/schema/security
           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
-          
+
 	<http auto-config="true">
-	  <intercept-url pattern="/home/secured/*" access="ROLE_USER" />
-		<form-login login-processing-url="/login" login-page="/home/loginPages"
+		<intercept-url pattern="/home/secured/*" access="ROLE_USER" />
+		<form-login login-processing-url="/login" login-page="/home/loginPage"
 			username-parameter="username" password-parameter="password"
-			default-target-url="/home/secured/mypage" authentication-failure-url="/home/loginPage?auth=fail" />
-		<logout logout-url="/logout" logout-success-url="/home/logoutPage" />	    
+			default-target-url="/home/secured/mypage" 
+			authentication-failure-url="/home/loginPage?auth=fail" />
+			
+		<session-management invalid-session-url="/home/loginPage?auth=fail"
+			session-fixation-protection="newSession">
+		<concurrency-control max-sessions="1"
+				error-if-maximum-exceeded="true" />
+		</session-management>
+		
+		<logout logout-url="/logout" logout-success-url="/home/logoutPage" delete-cookies="JSESSIONID"/>
 	</http>
-	
+
 	<authentication-manager>
 		<authentication-provider>
 			<user-service>

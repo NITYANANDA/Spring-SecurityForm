@@ -3,26 +3,34 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style>
+
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title><tiles:insertAttribute name="title" ignore="true" />
-</title>
+<title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
+
 <body>
-	<table border="1" cellspacing="1"   width="100%">
-		<tr>
-			<td height="30" colspan="2"><tiles:insertAttribute name="header" />
-			</td>
-		</tr>
-		<tr height="100%">
-			<td height="270" width="70px"><tiles:insertAttribute name="menu" />
-			</td>
-			<td width="410"><tiles:insertAttribute name="body" />
-			</td>
-		</tr>
-		<tr height="10px">
-			<td height="20" colspan="2"><tiles:insertAttribute name="footer" />
-			</td>
-		</tr>
-	</table>
-</body>
+<body>
+<table border="0" cellpadding="0" cellspacing="0"  style="width: 1255px; height: 400px">
+    <tr>
+        <td colspan="2" align="center" style="background-color: cyan;">
+            <tiles:insertAttribute name="header"></tiles:insertAttribute>
+        </td>
+    </tr>
+    <tr>
+        <td style="background-color: pink;">
+            <tiles:insertAttribute name="menu"></tiles:insertAttribute>
+        </td>
+        <td style="background-color: green;">
+            <tiles:insertAttribute name="body"></tiles:insertAttribute>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"  align="center" style="background-color: blue;">
+            <tiles:insertAttribute name="footer"></tiles:insertAttribute>
+        </td>
+    </tr>
+</table>
+</body>  
 </html>
